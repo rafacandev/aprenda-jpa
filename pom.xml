@@ -12,7 +12,7 @@
 	<artifactId>jpa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>jpa</name>
-	<description>Mateiral para aprender Java JPA com Spring Boot</description>
+	<description>Material para aprender Java JPA com Spring Boot</description>
 	<properties>
 		<java.version>19</java.version>
 	</properties>
@@ -40,6 +40,7 @@
 	</dependencies>
 
 	<build>
+		<defaultGoal>verify</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
