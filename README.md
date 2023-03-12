@@ -39,6 +39,18 @@ Quando o item é devolvido, o sistema registra o local onde o item está guardad
   └────────────┘
 ```
 
+Desenvolvimento
+---------------
+Voce pode rodar os tests pelo seu editor favorito ou pelo maven:
+```bash
+./mvnw
+```
+
+Vamos usar um banco de dados H2 em arquivos.
+O arquivo do banco de dados fica em `target/h2.mv.db`
+
+
+
 Referencias
 ===========
 * [Jakarta Persistence Specification](https://jakarta.ee/specifications/persistence/3.1/jakarta-persistence-spec-3.1.html)
