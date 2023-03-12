@@ -46,9 +46,17 @@ Voce pode rodar os tests pelo seu editor favorito ou pelo maven:
 ./mvnw
 ```
 
-Vamos usar um banco de dados H2 em arquivos.
-O arquivo do banco de dados fica em `target/h2.mv.db`
+Vamos utilizar um banco de dados H2 em arquivos.
+O arquivo do banco de dados fica localizado em `target/h2.mv.db`.
+Caso você queira apagar o banco de dados, pode limpar os arquivos gerados pelo Maven:
+```bash
+./mvnw clean
+```
 
+Ou apagar o arquivo de banco de dados manualmente:
+```bash
+rm target/h2.mv.db
+```
 
 
 Referencias
