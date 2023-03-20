@@ -1,6 +1,6 @@
 Aprenda JPA
 ===========
-Material para aprender Java JPA com Spring Boot.
+Material para aprender Java JPA (Jakarta Persistence) com Spring Boot.
 
 Tech stack utilizada neste material:
 * Java 19
@@ -10,9 +10,8 @@ Tech stack utilizada neste material:
 
 Proposta
 --------
-Vamos construir um sistema de empréstimo de itens.
-Nesse sistema, as pessoas podem pegar um item emprestado e depois devolvê-lo.
-Quando o item é devolvido, o sistema registra o local onde o item está guardado.
+Vamos desenvolver um sistema de empréstimo de itens no qual as pessoas poderão pegar emprestados vários itens e devolvê-los posteriormente.
+Para facilitar a identificação dos itens, cada um deles pode ter um QR Code.
 
 ```
   ┌─|PESSOA|───┐
@@ -29,35 +28,45 @@ Quando o item é devolvido, o sistema registra o local onde o item está guardad
   │nome        ├────────────────────┤             │
   │descricao   │                    │nome         │
   └──────────┬─┘                    └─────────────┘
-             │UmParaMuitos
+             │UmParaUm
              │
              │
-  ┌─|LOCAL|──┴─┐
+  ┌─|QrCode|─┴─┐
   │            │
-  │nome        │
-  │descricao   │
+  │codigo      │
   └────────────┘
 ```
 
+Videos
+------
+
+- Aprenda JPA 01 - Salvar e buscar entidades
+- Aprenda JPA 02 - Relacionamente UmParaUm (@OneToOne)
+- Aprenda JPA 03 - Relacionamente UmParaMuitos (@OneToMany)
+- Aprenda JPA 04 - Relacionamente MuitosParaMuitos (@ManyToMany)
+- Aprenda JPA 05 - Fetch types: Eager vs Lazy
+
+
+
 Desenvolvimento
 ---------------
-Voce pode rodar os tests pelo seu editor favorito ou pelo maven:
+Voce pode rodar os testes pelo seu editor favorito ou pelo maven:
 ```bash
 ./mvnw
 ```
 
 Vamos utilizar um banco de dados H2 em arquivos.
 O arquivo do banco de dados fica localizado em `target/h2.mv.db`.
-Caso você queira apagar o banco de dados, pode limpar os arquivos gerados pelo Maven:
-```bash
-./mvnw clean
-```
 
-Ou apagar o arquivo de banco de dados manualmente:
+Para apagar o banco de dados, basta apagar o arquivo `target/h2.mv.db`:
 ```bash
 rm target/h2.mv.db
 ```
 
+Ou limpar o projeto pelo maven:
+```bash
+./mvnw clean
+```
 
 Referencias
 ===========
