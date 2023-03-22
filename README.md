@@ -44,7 +44,8 @@ Videos
 - Aprenda JPA 02 - Relacionamente UmParaUm (@OneToOne)
 - Aprenda JPA 03 - Relacionamente UmParaMuitos (@OneToMany)
 - Aprenda JPA 04 - Relacionamente MuitosParaMuitos (@ManyToMany)
-- Aprenda JPA 05 - Busca personalizada
+- Aprenda JPA 05 - Melhorando JPA Testes
+- Aprenda JPA 06 - Busca personalizada
 
 
 
