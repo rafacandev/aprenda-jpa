@@ -9,7 +9,7 @@ Diagrama de Entidades:
 
 Modelo de banco de dados:
 ```
-  ┌─|ITEM|─────────┐       ┌─|ITEM_CATEGORIAS|───┐      ┌─|ITEM|─────────┐
+  ┌─|ITEM|─────────┐       ┌─|ITEM_CATEGORIAS|───┐      ┌─|CATEGORIA|────┐
   │                │       │                     │      │                │
   │id         : PK │       │item_id      : PK FK │      │id         : PK │
   │nome            │───────│categoria_id : PK FK │──────│nome            │
@@ -47,4 +47,16 @@ alter table if exists item_categorias
     add constraint FKnahruaf9ygpkm6bglistt5ubq 
     foreign key (item_id) 
     references item
+    
+create table categoria (
+    id integer not null,
+    nome varchar(255),
+    primary key (id)
+)
+
+alter table if exists categoria 
+    drop constraint if exists UK_prx5elpv558ah8pk8x18u56yc
+    
+alter table if exists categoria 
+    add constraint UK_prx5elpv558ah8pk8x18u56yc unique (nome) 
 ```

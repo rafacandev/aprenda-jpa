@@ -16,11 +16,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class PessoaRepositoryTest {
-    private static final String PESSOA_NOME = "nome da pessoa";
+    private static final String PESSOA_NOME = "Nome da pessoa";
     private static final String PESSOA_EMAIL = "test@test.com";
     private static final Vinculo PESSOA_VINCULO = Vinculo.VISITANTE;
-    private static final String ITEM_NOME = "nome do item";
-    private static final String ITEM_DESCRICAO = "descricao do item";
+    private static final String ITEM_NOME = "Nome do item";
+    private static final String ITEM_DESCRICAO = "Descricao do item";
 
     @Autowired
     private PessoaRepository pessoaRepository;
