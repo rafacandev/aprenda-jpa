@@ -40,11 +40,11 @@ Para facilitar a identificação dos itens, cada um deles pode ter um QR Code.
 Videos
 ------
 
-- Aprenda JPA 01 - Salvar e buscar entidades
+- Aprenda JPA 01 - Salvar e buscar por chave primaria
 - Aprenda JPA 02 - Relacionamente UmParaUm (@OneToOne)
 - Aprenda JPA 03 - Relacionamente UmParaMuitos (@OneToMany)
 - Aprenda JPA 04 - Relacionamente MuitosParaMuitos (@ManyToMany)
-- Aprenda JPA 05 - Fetch types: Eager vs Lazy
+- Aprenda JPA 05 - Busca personalizada
 
 
 

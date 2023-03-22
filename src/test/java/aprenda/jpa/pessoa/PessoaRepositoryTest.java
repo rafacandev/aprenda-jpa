@@ -24,7 +24,6 @@ class PessoaRepositoryTest {
 
     @Autowired
     private PessoaRepository pessoaRepository;
-
     @Autowired
     private ItemRepository itemRepository;
 
@@ -32,7 +31,6 @@ class PessoaRepositoryTest {
     void deleteAll() {
         pessoaRepository.deleteAll();
     }
-
 
     @Test
     void save_NovaPessoa_Entao_VerificarNoBanco() {
