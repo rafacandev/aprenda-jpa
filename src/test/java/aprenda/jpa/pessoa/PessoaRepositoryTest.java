@@ -2,6 +2,7 @@ package aprenda.jpa.pessoa;
 
 import aprenda.jpa.item.FabricaDeItem;
 import aprenda.jpa.item.ItemRepository;
+import aprenda.jpa.util.ApagadorDeRepositorios;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,10 +24,12 @@ class PessoaRepositoryTest {
     private PessoaRepository pessoaRepository;
     @Autowired
     private ItemRepository itemRepository;
+    @Autowired
+    private ApagadorDeRepositorios apagadorDeRepositorios;
 
     @BeforeEach
     void antesDeCadaTeste() {
-        pessoaRepository.deleteAll();
+        apagadorDeRepositorios.apagarTudo();
     }
 
     @Test
@@ -49,7 +52,7 @@ class PessoaRepositoryTest {
     void save_NovaPessoaComEmailDuplicado_Entao_ExcecaoAoSalvar() {
         pessoaRepository.save(novaPessoa());
         var excecao = assertThrows(DataIntegrityViolationException.class, () -> pessoaRepository.save(novaPessoa()));
-        assertTrue(excecao.getMessage().contains("UNIQUE_EMAIL"));
+        assertTrue(excecao.getMessage().contains("EMAIL_UNICO"));
     }
 
     @Test

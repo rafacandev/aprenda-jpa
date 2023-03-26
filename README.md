@@ -39,15 +39,15 @@ Para facilitar a identificação dos itens, cada um deles pode ter um QR Code.
 
 Videos
 ------
-
-- Aprenda JPA 01 - Salvar e buscar por chave primaria
-- Aprenda JPA 02 - Relacionamente UmParaUm (@OneToOne)
-- Aprenda JPA 03 - Relacionamente UmParaMuitos (@OneToMany)
-- Aprenda JPA 04 - Relacionamente MuitosParaMuitos (@ManyToMany)
-- Aprenda JPA 05 - Melhorando JPA Testes
-- Aprenda JPA 06 - Busca personalizada
-
-
+- Aprenda JPA 01 - Criar projeto e configuracoes
+- Aprenda JPA 02 - Salvar e buscar por chave primaria
+- Aprenda JPA 03 - Relacionamento UmParaUm (@OneToOne)
+- Aprenda JPA 04 - Relacionamento UmParaMuitos (@OneToMany)
+- Aprenda JPA 05 - Relacionamento MuitosParaMuitos (@ManyToMany)
+- Aprenda JPA 06 - Fetch Type: Lazy vs Eager 
+- Aprenda JPA 07 - Transacoes com @Transactional
+- Aprenda JPA 09 - Buscas avancadas: Pelo Nome do Metodo
+- Aprenda JPA 10 - Buscas avancadas: @Query
 
 Desenvolvimento
 ---------------

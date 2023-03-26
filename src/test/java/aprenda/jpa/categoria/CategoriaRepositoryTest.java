@@ -1,18 +1,26 @@
 package aprenda.jpa.categoria;
 
+import aprenda.jpa.util.ApagadorDeRepositorios;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static aprenda.jpa.categoria.ConstantesDeCategoria.CATEGORIA_NOME;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 public class CategoriaRepositoryTest {
-    private static final String CATEGORIA_NOME = "Computador pessoal";
-
     @Autowired
     private CategoriaRepository categoriaRepository;
+    @Autowired
+    private ApagadorDeRepositorios apagadorDeRepositorios;
+
+    @BeforeEach
+    void antesDeCadaTeste() {
+        apagadorDeRepositorios.apagarTudo();
+    }
 
     @Test
     void save_NovaCategoria_Entao_VerificarNoBanco() {

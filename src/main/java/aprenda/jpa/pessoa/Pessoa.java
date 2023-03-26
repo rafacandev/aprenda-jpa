@@ -10,7 +10,7 @@ import java.util.Set;
 @Getter
 @Setter
 @Entity
-@Table(uniqueConstraints = @UniqueConstraint(name = "UNIQUE_EMAIL", columnNames = "email"))
+@Table(uniqueConstraints = @UniqueConstraint(name = "EMAIL_UNICO", columnNames = "email"))
 public class Pessoa {
     @Id
     @GeneratedValue

@@ -31,7 +31,7 @@ Modelo de banco de dados:
   ┌─|PESSOA_ITEMS|───┐
   │                  │
   │pessoa_id : PK FK │
-  │item_id   : PK FK │
+  │items_id   : PK FK │
   └──────────────────┘
              │
              │
