@@ -6,16 +6,14 @@ import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
-import static java.util.Optional.of;
+import java.util.List;
 
 @Repository
 public class BuscaCriteriaApi {
     @Autowired
     private EntityManager em;
 
-    public Optional<Pessoa> buscaPorNome(String nome) {
+    public List<Pessoa> buscaPorNome(String nome) {
         var cb = em.getCriteriaBuilder();
         var query = cb.createQuery(Pessoa.class);
 
@@ -25,10 +23,10 @@ public class BuscaCriteriaApi {
         var igualNome = cb.equal(pessoa.get("nome"), nome);
         query.where(igualNome);
 
-        return of(em.createQuery(query).getSingleResult());
+        return em.createQuery(query).getResultList();
     }
 
-    public Optional<Pessoa> buscaPorNomeEVinculo(String nome, Vinculo vinculo) {
+    public List<Pessoa> buscaPorNomeEVinculo(String nome, Vinculo vinculo) {
         var cb = em.getCriteriaBuilder();
         var query = cb.createQuery(Pessoa.class);
 
@@ -39,10 +37,10 @@ public class BuscaCriteriaApi {
         var igualVinculo = cb.equal(pessoa.get("vinculo"), vinculo);
         query.where(igualNome, igualVinculo);
 
-        return of(em.createQuery(query).getSingleResult());
+        return em.createQuery(query).getResultList();
     }
 
-    public Optional<Pessoa> buscaPorNomeDoItem(String nomeDoItem) {
+    public List<Pessoa> buscaPorNomeDoItem(String nomeDoItem) {
         var cb = em.getCriteriaBuilder();
         var query = cb.createQuery(Pessoa.class);
 
@@ -54,6 +52,6 @@ public class BuscaCriteriaApi {
         var iqualNomeDoItem = cb.equal(items.get("nome"), nomeDoItem);
         query.where(iqualNomeDoItem);
 
-        return of(em.createQuery(query).getSingleResult());
+        return em.createQuery(query).getResultList();
     }
 }

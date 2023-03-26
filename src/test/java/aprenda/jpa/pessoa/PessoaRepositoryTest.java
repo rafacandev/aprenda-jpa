@@ -13,7 +13,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static aprenda.jpa.pessoa.ConstantesDePessoa.*;
+import static aprenda.jpa.pessoa.ConstantesDePessoa.PESSOA_EMAIL;
 import static aprenda.jpa.pessoa.FabricaDePessoa.novaPessoa;
 import static org.junit.jupiter.api.Assertions.*;
 

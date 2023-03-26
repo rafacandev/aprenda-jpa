@@ -3,7 +3,6 @@ package aprenda.jpa.busca;
 import aprenda.jpa.item.ItemRepository;
 import aprenda.jpa.pessoa.VerificadorDePessoa;
 import aprenda.jpa.util.ApagadorDeRepositorios;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static aprenda.jpa.pessoa.ConstantesDePessoa.PESSOA_NOME;
 import static aprenda.jpa.pessoa.FabricaDePessoa.novaPessoa;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
 public class BuscaQueryNativaTest {
@@ -30,15 +30,17 @@ public class BuscaQueryNativaTest {
     void buscaPorNome_PessoaExisteNoBanco_RetornaPessoa() {
         var pessoa = novaPessoa();
         buscaQueryNativa.save(pessoa);
-        buscaQueryNativa.buscaPorNome(PESSOA_NOME)
-                .ifPresentOrElse(VerificadorDePessoa::verificarPessoa, Assertions::fail);
+        var pessoas = buscaQueryNativa.buscaPorNome(PESSOA_NOME);
+        assertFalse(pessoas.isEmpty());
+        pessoas.forEach(VerificadorDePessoa::verificarPessoa);
     }
 
     @Test
     void buscaPorNomeEVinculo_PessoaExisteNoBanco_RetornaPessoa() {
         var pessoa = novaPessoa();
         buscaQueryNativa.save(pessoa);
-        buscaQueryNativa.buscaPorNomeEVinculo(PESSOA_NOME)
-                .ifPresentOrElse(VerificadorDePessoa::verificarPessoa, Assertions::fail);
+        var pessoas = buscaQueryNativa.buscaPorNomeEVinculo(PESSOA_NOME);
+        assertFalse(pessoas.isEmpty());
+        pessoas.forEach(VerificadorDePessoa::verificarPessoa);
     }
 }
