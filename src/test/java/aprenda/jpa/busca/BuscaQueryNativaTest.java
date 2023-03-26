@@ -1,6 +1,7 @@
-package aprenda.jpa.pessoa;
+package aprenda.jpa.busca;
 
 import aprenda.jpa.item.ItemRepository;
+import aprenda.jpa.pessoa.VerificadorDePessoa;
 import aprenda.jpa.util.ApagadorDeRepositorios;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,18 +27,18 @@ public class BuscaQueryNativaTest {
     }
 
     @Test
-    void findPessoaByName_PessoaExisteNoBanco_RetornaPessoa() {
+    void buscaPorNome_PessoaExisteNoBanco_RetornaPessoa() {
         var pessoa = novaPessoa();
         buscaQueryNativa.save(pessoa);
-        buscaQueryNativa.buscaNativaPorNome(PESSOA_NOME)
+        buscaQueryNativa.buscaPorNome(PESSOA_NOME)
                 .ifPresentOrElse(VerificadorDePessoa::verificarPessoa, Assertions::fail);
     }
 
     @Test
-    void findPessoaByNameAndVinculo_PessoaExisteNoBanco_RetornaPessoa() {
+    void buscaPorNomeEVinculo_PessoaExisteNoBanco_RetornaPessoa() {
         var pessoa = novaPessoa();
         buscaQueryNativa.save(pessoa);
-        buscaQueryNativa.buscaNativaPorNomeEVinculo(PESSOA_NOME)
+        buscaQueryNativa.buscaPorNomeEVinculo(PESSOA_NOME)
                 .ifPresentOrElse(VerificadorDePessoa::verificarPessoa, Assertions::fail);
     }
 }

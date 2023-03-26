@@ -1,7 +1,8 @@
-package aprenda.jpa.pessoa;
+package aprenda.jpa.busca;
 
 import aprenda.jpa.item.ConstantesDeItem;
 import aprenda.jpa.item.ItemRepository;
+import aprenda.jpa.pessoa.VerificadorDePessoa;
 import aprenda.jpa.util.ApagadorDeRepositorios;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

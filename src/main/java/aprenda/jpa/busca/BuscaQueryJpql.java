@@ -1,11 +1,13 @@
-package aprenda.jpa.pessoa;
+package aprenda.jpa.busca;
 
+import aprenda.jpa.pessoa.Pessoa;
+import aprenda.jpa.pessoa.Vinculo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.Optional;
 
-public interface BuscaNomeDoMetodo extends JpaRepository<Pessoa, Integer> {
+public interface BuscaQueryJpql extends JpaRepository<Pessoa, Integer> {
     Optional<Pessoa> findByNome(String nome);
 
     Optional<Pessoa> findByNomeAndVinculo(String pessoaNome, Vinculo pessoaVinculo);
