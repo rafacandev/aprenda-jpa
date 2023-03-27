@@ -45,9 +45,11 @@ Videos
 - Aprenda JPA 04 - Relacionamento UmParaMuitos (@OneToMany)
 - Aprenda JPA 05 - Relacionamento MuitosParaMuitos (@ManyToMany)
 - Aprenda JPA 06 - Fetch Type: Lazy vs Eager 
-- Aprenda JPA 07 - Transacoes com @Transactional
-- Aprenda JPA 09 - Buscas avancadas: Pelo Nome do Metodo
-- Aprenda JPA 10 - Buscas avancadas: @Query
+- Aprenda JPA 07 - @Transactional
+- Aprenda JPA 08 - Buscas avancadas: Pelo Nome do Metodo
+- Aprenda JPA 09 - Buscas avancadas: @Query
+- Aprenda JPA 10 - Buscas avancadas: Criteria API
+- Aprenda JPA 11 - Associação por tabelas e colunas
 
 Desenvolvimento
 ---------------
