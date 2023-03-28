@@ -2,16 +2,22 @@ Aprenda JPA
 ===========
 Material para aprender Java JPA (Jakarta Persistence) com Spring Boot.
 
+Requerimentos:
+* Conhecimentos basicos de Java
+* Java Development Kit (JDK) 19 
+* Git
+
 Tech stack utilizada neste material:
 * Java 19
-* JPA, também conhecido como Jakarta Persistence 
-* Maven (opicional)
+* JPA, também conhecido como Jakarta Persistence
+* Maven
 * Database H2
 
 Proposta
 --------
-Vamos desenvolver um sistema de empréstimo de itens no qual as pessoas poderão pegar emprestados vários itens e devolvê-los posteriormente.
+Vamos desenvolver um sistema de empréstimo de itens no qual pessoas poderão pegar emprestados vários itens e devolvê-los posteriormente.
 Para facilitar a identificação dos itens, cada um deles pode ter um QR Code.
+Itens semelhantes podem estar associados a uma categoria.
 
 ```
   ┌─|PESSOA|───┐
@@ -46,30 +52,20 @@ Videos
 - Aprenda JPA 05 - Relacionamento MuitosParaMuitos (@ManyToMany)
 - Aprenda JPA 06 - Fetch Type: Lazy vs Eager 
 - Aprenda JPA 07 - @Transactional
-- Aprenda JPA 08 - Buscas avancadas: Pelo Nome do Metodo
-- Aprenda JPA 09 - Buscas avancadas: @Query
-- Aprenda JPA 10 - Buscas avancadas: Criteria API
+- Aprenda JPA 08 - Busca avancada: Pelo Nome do Metodo
+- Aprenda JPA 09 - Busca avancada: @Query
+- Aprenda JPA 10 - Busca avancada: Criteria API
 - Aprenda JPA 11 - Associação por tabelas e colunas
 
 Desenvolvimento
 ---------------
-Voce pode rodar os testes pelo seu editor favorito ou pelo maven:
+
+Você pode rodar os testes pelo seu editor favorito ou pelo maven com o seguinte comando:
 ```bash
 ./mvnw
 ```
 
-Vamos utilizar um banco de dados H2 em arquivos.
-O arquivo do banco de dados fica localizado em `target/h2.mv.db`.
-
-Para apagar o banco de dados, basta apagar o arquivo `target/h2.mv.db`:
-```bash
-rm target/h2.mv.db
-```
-
-Ou limpar o projeto pelo maven:
-```bash
-./mvnw clean
-```
+Vamos utilizar um banco de dados H2 rodando em memória que será inicializado toda vez que executarmos os testes.
 
 Referencias
 ===========
