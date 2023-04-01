@@ -10,6 +10,8 @@ Requerimentos:
 Tech stack utilizada neste material:
 * Java 19
 * JPA, também conhecido como Jakarta Persistence
+* Spring Boot
+* Spring Data JPA
 * Maven
 * Database H2
 
