@@ -71,6 +71,7 @@ Vamos utilizar um banco de dados H2 rodando em memória que será inicializado t
 
 Referencias
 ===========
+* [String Initialzr](https://start.spring.io/)
 * [Jakarta Persistence Specification](https://jakarta.ee/specifications/persistence/3.1/jakarta-persistence-spec-3.1.html)
 * [Spring Boot Reference](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 * [Spring Boot Data JPA Reference](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
