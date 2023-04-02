@@ -1,9 +1,11 @@
 Aprenda JPA
 ===========
-Material para aprender Java JPA (Jakarta Persistence) com Spring Boot.
+Material para aprender Java JPA (Jakarta Persistence) com Spring Boot e Spring Data.
 
 Requerimentos:
 * Conhecimentos basicos de Java
+* Conhecimentos basicos de Spring
+* Conhecimentos basicos de Banco de Dados
 * Java Development Kit (JDK) 19 
 * Git
 
@@ -14,6 +16,7 @@ Tech stack utilizada neste material:
 * Spring Data JPA
 * Maven
 * Database H2
+* Git
 
 Proposta
 --------
